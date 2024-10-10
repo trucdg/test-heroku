@@ -1,0 +1,22 @@
+<!-- templates/mini_fb/show_profile.html -->
+
+{% extends 'mini_fb/base.html' %}
+
+{% block content %}
+<div class="profile-detail-container">
+    <h1 class="profile-name">{{ profile.first_name }} {{ profile.last_name }}</h1>
+    
+    <div class="profile-detail-image-container">
+        <img class="profile-image" src="{{ profile.image_url }}" alt="{{ profile.first_name }} {{ profile.last_name }}">
+    </div>
+
+    <div class="profile-detail-info">
+        <p><strong>Email:</strong> {{ profile.email }}</p>
+        <p><strong>City:</strong> {{ profile.city }}</p>
+    </div>
+
+    <div class="profile-detail-actions">
+        <a href="{% url 'mini_fb:show_all_profiles_view' %}" class="profile-detail-button">Back to All Profiles</a>
+    </div>
+</div>
+{% endblock %}

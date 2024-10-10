@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Profile
 
 
@@ -17,3 +17,15 @@ class ShowAllProfilesView(ListView):
 
     # the name of the object manager that store all profiles
     context_object_name = "profiles"
+
+
+class ShowProfilePageView(DetailView):
+    """
+    A view class to display a single profile page
+    """
+
+    model = Profile
+
+    template_name = "mini_fb/show_profile.html"
+
+    context_object_name = "profile"

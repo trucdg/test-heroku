@@ -10,17 +10,17 @@ mini_fb/templates/mini_fb/base.html
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="{% url 'quotes:show_all' %}">Quote App</a></li>
-                <li><a href="{% url 'restaurant:main' %}">Restaurant App</a></li>
-                <li><a href="{% url 'mini_fb:show_all_profiles_view' %}">Mini Facebook</a></li>
-            </ul>
-        </nav>
 
         <header>
             <h1>Mini Facebook</h1>
         </header>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'mini_fb:show_all_profiles_view' %}"> All Profiles</a></li>
+            </ul>
+        </nav>
+
 
         {% block content %}
 
