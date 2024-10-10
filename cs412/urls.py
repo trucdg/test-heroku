@@ -24,4 +24,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # Include the URLs for the 'quotes' app in the main project URL patterns.
     path("quotes/", include("quotes.urls")),
+    # Include the URLs for the 'restaurant' app
+    path("restaurant/", include("restaurant.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
