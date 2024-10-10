@@ -26,4 +26,6 @@ urlpatterns = [
     path("quotes/", include("quotes.urls")),
     # Include the URLs for the 'restaurant' app
     path("restaurant/", include("restaurant.urls")),
+    # Include the URLs for the 'mini_fb' app
+    path("mini_fb/", include("mini_fb.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
