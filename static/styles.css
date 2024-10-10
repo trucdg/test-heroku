@@ -238,48 +238,61 @@ h3 {
 /* Container for all profiles */
 .profiles-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px; 
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 20px;
+    justify-content: space-around; /* Space profiles around */
     margin-top: 20px;
 }
 
 /* Each individual profile container */
 .profile {
     display: flex;
-    flex-direction: row; /* Arrange profile info and image side by side */
-    justify-content: space-between;
-    align-items: center; /* Align items vertically */
-    padding: 20px;
+    flex-direction: column;
+    align-items: center; /* Center profile info and image */
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px; 
+    flex-basis: calc(33.33% - 40px);
+    box-sizing: border-box; /* Include padding and border in width */
 }
 
 /* Styling for profile info section */
 .profile-info {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Adds space between fields */
+    align-items: center;
+    text-align: center;
 }
 
 /* Profile image styling */
 img.profile-image {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #ccc;
+    margin-top: 20px;
 }
 
 /* Media query for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .profile {
-        flex-direction: column; /* Stack fields and image vertically on smaller screens */
+        flex-basis: calc(50% - 40px); /* On medium screens, profiles take up 50% of the container */
+    }
+}
+
+@media (max-width: 768px) {
+    .profiles-container {
+        justify-content: center; /* Center align profiles on smaller screens */
+    }
+
+    .profile {
+        flex-basis: 100%;
     }
 
     img.profile-image {
-        width: 100%; /* Make image take full width in smaller screens */
         height: auto; /* Maintain aspect ratio */
     }
 }
