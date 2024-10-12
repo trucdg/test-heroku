@@ -368,7 +368,7 @@ img.profile-image {
 
 /* Status messages container styling */
 .status-messages-container {
-    margin-top: 20px;
+    margin: 20px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
