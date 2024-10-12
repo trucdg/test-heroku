@@ -11,14 +11,7 @@ body {
     line-height: 1.6; /* Improve text readability */
     box-sizing: border-box;
 }
-a { 
-    text-decoration: none;
-    color: rgb(22, 232, 166);
-}
 
-a:hover {
-    color: rgb(229, 82, 200);
-}
 
 /* Navigation menu styling */
 nav ul {
@@ -304,6 +297,17 @@ img.profile-image {
     img.profile-image {
         height: auto; /* Maintain aspect ratio */
     }
+}
+
+/* Single Profile View */
+.profile-detail-container {
+    max-width: 800px; /* Set a max-width for the container */
+    margin: 40px auto; /* Center the container on the page */
+    padding: 20px;
+    border: 1px solid #ccc; /* Border around the profile container */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* Profile detail table styling */
