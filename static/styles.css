@@ -301,37 +301,41 @@ img.profile-image {
 
 /* Single Profile View */
 .profile-detail-container {
-    max-width: 800px; /* Set a max-width for the container */
-    margin: 40px auto; /* Center the container on the page */
+    max-width: 800px; 
+    margin: 40px auto;
     padding: 20px;
-    border: 1px solid #ccc; /* Border around the profile container */
-    border-radius: 10px; /* Rounded corners */
-    background-color: #ffffff; /* White background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Profile detail table styling */
 .profile-detail-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate; 
+    border-spacing: 0 10px;
     margin-top: 20px;
-    column-gap: 20px;
 }
 
-.profile-detail-table th, 
-.profile-detail-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
+/* Table headers (th) */
 .profile-detail-table th {
-    background-color: #c8b6b6;
+    padding: 15px;
+    text-align: left;
+    background-color: #f4f4f4; 
+    color: #333; 
     font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    border-right: 1px solid #ddd; 
 }
 
+/* Table cells (td) */
 .profile-detail-table td {
+    padding: 15px;
     background-color: #fff;
+    color: #555; 
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd; 
 }
 
 /* Profile image container */
@@ -345,9 +349,19 @@ img.profile-image {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid #ccc; 
+    border: 2px solid #ccc;
+}
+
+/* Profile detail button */
+.profile-detail-button {
+    padding: 10px 20px;
+    background-color: #47dbca;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .profile-detail-button:hover {
-    background-color: #e51ab2; 
-} 
+    background-color: #c533c0; /* Darker blue on hover */
+}
