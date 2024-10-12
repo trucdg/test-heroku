@@ -5,17 +5,29 @@
 {% block content %}
 
 <div class="profile-detail-container">
-    <div id="profile-detail-flex">
-        <div class="profile-detail-image-container">
-            <img class="profile-detail-image" src="{{ profile.image_url }}" alt="{{ profile.first_name }} {{ profile.last_name }}">
-        </div>
-    
-        <div class="profile-detail-info">
-            <h2 class="profile-name">{{ profile.first_name }} {{ profile.last_name }}</h2>
-            <p><strong>Email:</strong> {{ profile.email }}</p>
-            <p><strong>City:</strong> {{ profile.city }}</p>
-        </div>
+    <div class="profile-detail-image-container">
+        <img class="profile-detail-image" src="{{ profile.image_url }}" alt="{{ profile.first_name }} {{ profile.last_name }}">
     </div>
+
+    <!-- Table layout for profile details -->
+    <table class="profile-detail-table">
+        <tr>
+            <th>First Name</th>
+            <td>{{ profile.first_name }}</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>{{ profile.last_name }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ profile.email }}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{ profile.city }}</td>
+        </tr>
+    </table>
 
     <div class="profile-detail-actions">
         <a href="{% url 'mini_fb:show_all_profiles_view' %}" class="profile-detail-button">Back to All Profiles</a>
