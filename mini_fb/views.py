@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Profile
+from .forms import CreateProfileForm
+from django.urls import reverse
 
 
 # Create your views here.
@@ -29,3 +30,42 @@ class ShowProfilePageView(DetailView):
     template_name = "mini_fb/show_profile.html"
 
     context_object_name = "profile"
+
+
+class CreateProfileView(CreateView):
+    """
+    a class inherits from the generic CreateView class
+    handles request to URL: '/mini_fb/create_profile/'
+    - on GET: returns a form to create a Profile instance
+    - on POST: process and validate the form,
+               then create and save the new Profile,
+               then redirect to the DetailView of this Profile
+
+    """
+
+    # Specify the form that this view use
+    form_class = CreateProfileForm
+    template_name = "mini_fb/create_profile_form.html"
+
+    def form_valid(self, form):
+        """
+        This method is called after the form is validated
+        before saving the data to the database
+        """
+        print(f"CreateProfileView.form_valid(): form={form.cleaned_data}")
+        print(f"CreateProfileView.form_valid(): self.kwargs={self.kwargs}")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        """
+        this method is called when the form is invalid
+        """
+        print(f"CreateProfileView.form_invalid(): form={form.cleaned_data}")
+        print(f"CreateProfileView.form_invalid(): self.kwargs={self.kwargs}")
+        return super().form_invalid(form)
+
+    def get_success_url(self) -> str:
+        """
+        return the URL to redirect on success
+        """
+        return reverse("mini_fb:show_profile", kwargs={"pk": self.object.pk})
