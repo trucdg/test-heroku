@@ -18,5 +18,11 @@
             <!-- Submit button -->
             <button type="submit" class="create-profile-submit-btn">Create Profile</button>
          </form>
+
+         <!-- Cancel button -->
+        <form method="GET" action="{% url 'mini_fb:show_all_profiles_view' %}">
+            <button type="submit" class="create-profile-submit-btn">Cancel</button>
+        </form>
+         
     </div>
 {% endblock %}
