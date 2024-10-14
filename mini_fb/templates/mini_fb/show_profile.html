@@ -44,6 +44,8 @@
         {% else %}
             <p> No tales to tell just yet! But stay tuned ...!</p>
         {% endif %}
+
+        <a href="{% url 'mini_fb:create_status' profile.pk %}" class="create-status-button"> Create Status </a>
     </div>
 
     <div class="profile-detail-actions">

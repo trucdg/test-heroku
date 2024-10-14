@@ -485,4 +485,94 @@ img.profile-image {
     }
 }
 
+/* Button styling for Create Status */
+.create-status-button {
+    padding: 10px 20px;
+    background-color: #cc5bdd; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.create-status-button:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+
+/* Container styling for the status creation form */
+.create-status-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Heading styling */
+.create-status-heading {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Table layout for form fields */
+.create-status-table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.create-status-table th,
+.create-status-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Form input styling */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.submit-btn, .cancel-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Submit button styles */
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Cancel button styles */
+.cancel-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Button hover effects */
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn:hover {
+    background-color: #c9302c;
+}
+
+
 
